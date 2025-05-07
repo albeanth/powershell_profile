@@ -2,41 +2,49 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
+      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "style": "plain",
-          "foreground": "#1fd000",
           "properties": {
-            "fetch_virtual_env":true
+            "cache_duration": "none",
+            "fetch_virtual_env": true
           },
           "template": "({{ .Venv }}) ",
-          "type": "python"
+          "foreground": "#1fd000",
+          "type": "python",
+          "style": "plain"
         },
         {
-          "foreground": "#cfcfcf",
           "properties": {
+            "cache_duration": "none",
             "style": "full"
           },
-          "style": "plain",
           "template": "{{ .Path }} ",
-          "type": "path"
-        },
-        {
-          "foreground": "#0073ff",
-          "style": "plain",
-          "template": "{{ .UpstreamIcon }}{{ .HEAD }} ",
-          "type": "git"
-        },
-        {
           "foreground": "#cfcfcf",
-          "style": "plain",
+          "type": "path",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "{{ .UpstreamIcon }}{{ .HEAD }} ",
+          "foreground": "#0073ff",
+          "type": "git",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
           "template": "> ",
-          "type": "text"
+          "foreground": "#cfcfcf",
+          "type": "text",
+          "style": "plain"
         }
-      ],
-      "type": "prompt"
+      ]
     }
   ],
-  "version": 2
+  "version": 3
 }
